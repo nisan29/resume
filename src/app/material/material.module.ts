@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
 
-const materialModules: any[] = [];
+const materialModules: any[] = [MatIconModule];
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     ...materialModules
-  ]
+  ],
+  exports: [MatIconModule]
 })
 export class MaterialModule { }
