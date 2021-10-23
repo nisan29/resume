@@ -1,9 +1,53 @@
-<div class="header">
-  <ul>
-    <li>
-      <a href="#">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-      </a>
-    </li>
-  </ul>
+<div class="header" [ngClass]="{'header--active': isActive}">
+  <div class="container">
+    <section class="header__image">
+      <div class="row">
+        <div class="col-lg-12 center">
+          <div class="header__image-container">
+            <img class="img-fluid" src="http://picsum.photos/300/300" alt="">
+          </div>
+          <h2 class="text-center">Nisan Shamir</h2>
+          <h4 class="text-center">Web Developer</h4>
+        </div>
+      </div>
+    </section>
+    <section class="header__links">
+      <div class="d-flex text-center">
+        <a target="_blank" href="">
+          <i class="fab fa-github"></i>
+        </a>
+        <a target="_blank" href="">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </section>
+    <section class="header__nav">
+      <nav>
+        <ul>
+          <li>
+            <i class="fas fa-home"></i>
+            <a href="#home">home</a>
+          </li>
+          <li>
+            <a href="#about">about</a>
+          </li>
+          <li>
+            <a href="#resume">resume</a>
+          </li>
+          <li>
+            <a href="#portfolio">portfolio</a>
+          </li>
+          <li>
+            <a href="#contact">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </div>
+</div>
+
+<div class="menu-btn-container">
+  <button mat-fab (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
 </div>
